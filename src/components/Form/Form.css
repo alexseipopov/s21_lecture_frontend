@@ -1,0 +1,19 @@
+.form {
+    margin: 20px auto;
+    width: 500px;
+    border: 1px solid #fa0;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.form__row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #fa0;
+}
