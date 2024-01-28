@@ -1,8 +1,7 @@
 import './Content.css'
-import {useState} from "react";
 
-const Content = () => {
-    const [posts, setPosts] = useState([]) // posts = []
+
+const Content = ({posts}) => {
 
     if (posts.length === 0) {
         return (
@@ -14,7 +13,14 @@ const Content = () => {
 
     return (
         <div className="content">
-            <h1>Content</h1>
+            {posts.map((post, i) =>
+                (
+                    <div key={i} className="content__item">
+                        <h3>{post.title}</h3>
+                        <p>{post.content}</p>
+                    </div>
+                )
+            )}
         </div>
     );
 }
